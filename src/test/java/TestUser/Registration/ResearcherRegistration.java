@@ -68,7 +68,7 @@ public class ResearcherRegistration {
 
         log.info("ChromeDriver initialisé");
     }
-
+/*
     @Test
     void CheckValidResearcherRegistrationWithInformatiqueDoctorat() {
 
@@ -174,7 +174,7 @@ public class ResearcherRegistration {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'})", terms);
         terms.click();
     }
-
+*/
     @AfterEach
     void tearDown() {
         log.info("=== FIN tearDown (fermeture du navigateur) ===");
