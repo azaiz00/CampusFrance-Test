@@ -5,7 +5,6 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.idealized.Javascript;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -16,8 +15,8 @@ import java.time.Duration;
 import java.util.List;
 import enums.Status;
 
-public class StudentRegstation {
-    private static final Logger log = LoggerFactory.getLogger(StudentRegstation.class);
+public class StudentRegstationTest {
+    private static final Logger log = LoggerFactory.getLogger(StudentRegstationTest.class);
     WebDriver driver;
 
     private void selectRadioBtnStatus(Status status) {
