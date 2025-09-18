@@ -1,0 +1,26 @@
+<configuration debug="true">
+    <!-- Appender qui affiche les logs dans la console IntelliJ -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- %d : date, %-5level : niveau (INFO, ERROR...), %logger : nom de la classe, %msg : message -->
+            <pattern>%d{HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Appender qui écrit les logs dans un fichier -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- Destination des logs (dans le dossier target de Maven) -->
+        <file>target/logs/test.log</file>
+        <!-- append=true : on ajoute au fichier existant au lieu de l’écraser -->
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger racine : tout ce qui est logué à partir du niveau INFO -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
